@@ -10,7 +10,17 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<script src="../js/jquery.js"></script>
 	<script src="../js/jquery.bxslider.js"></script>
-
+	<script>
+		$(function(){
+			$(".sub").hide();
+			$(".gnb>ul>li").hover(function(){
+				var i=$(this).index();
+				$(".sub").eq(i).stop().slideDown();
+			}, function(){
+				$(".sub").hide();
+			})
+		})
+	</script>
 </head>
 <body>
 	<header id="header_wrap">
@@ -35,59 +45,54 @@
 				</div>
 			</div>
 		</div>
-	
-		<div class="gnb_wrap">
-			<div class="sub_wrap"></div>
-			<ul class="gnb">
-				<li class="gnb_li">
-					<a href="#">여행도시</a>	
-					<ul class="sub">
+		
+		<nav class="gnb">
+
+			<ul>
+				<li><a href="#">여행도시</a>	
+					<ul class="sub one">
 						<li><a href="#">여행도시</a></li>
 						<li><a href="#">여행도시</a></li>
 						<li><a href="#">여행도시</a></li>
 						<li><a href="#">여행도시</a></li>
 					</ul>
 				</li>
-				<li class="gnb_li">
-					<a href="#">호텔예약</a>
-					<ul class="sub">
+				<li><a href="#">호텔예약</a>
+					<ul class="sub two">
 						<li><a href="#">호텔예약</a></li>
 						<li><a href="#">호텔예약</a></li>
 						<li><a href="#">호텔예약</a></li>
 						<li><a href="#">호텔예약</a></li>
 					</ul>
 				</li>
-				<li class="gnb_li ">
-					<a href="#">렌트카</a>
-					<ul class="sub">
+				<li><a href="#">렌트카</a>
+					<ul class="sub three">
 						<li><a href="#">렌트카</a></li>
 						<li><a href="#">렌트카</a></li>
 						<li><a href="#">렌트카</a></li>
 						<li><a href="#">렌트카</a></li>
 					</ul>
 				</li>
-				<li class="new gnb_li"">
+				<li>
 					<a href="#">
 					<img src="../images-h/new.png" alt="new">여행TIP</a>
-					<ul class="sub" style="float: right;">
+					<ul class="sub four">
 						<li><a href="#">여행 TIP</a></li>
 						<li><a href="#">여행 TIP</a></li>
 						<li><a href="#">여행 TIP</a></li>
 						<li><a href="#">여행 TIP</a></li>
 					</ul>
 				</li>
-				<li class="gnb_li">
-					<a href="#">회사소개</a>
-					<ul class="sub" style="float: right;">
+				<li><a href="#">회사소개</a>
+					<ul class="sub five">
 						<li><a href="#">사업영역</a></li>
 						<li><a href="#">조직도</a></li>
 						<li><a href="#">채용정보</a></li>
 						<li><a href="#">오시는 길</a></li>
 					</ul>
 				</li>
-				<li class="gnb_li">
-					<a href="#">커뮤니티</a>
-					<ul class="sub" style="float: right;">
+				<li><a href="#">커뮤니티</a>
+					<ul class="sub six">
 						<li><a href="#">커뮤니티</a></li>
 						<li><a href="#">커뮤니티</a></li>
 						<li><a href="#">커뮤니티</a></li>
@@ -95,8 +100,7 @@
 					</ul>
 				</li>
 			</ul>
-			
-		</div>
+		</nav>
 	</header>
 
 
