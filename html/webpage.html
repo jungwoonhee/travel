@@ -14,6 +14,14 @@
 
 	<script>
 		$(document).ready(function(){
+			$(".sub").hide();
+			$(".gnb>ul>li").hover(function(){
+				var a=$(this).index();
+				$(".sub").eq(a).stop().slideDown();
+			}, function(){
+				$(".sub").hide();
+			})
+
 			var i=$('#slider').bxSlider({
 				controls:false
 			});
@@ -105,18 +113,74 @@
 				</div>
 			</div>
 		</div>
-	
-		<div class="gnb_wrap">
-			<ul class="gnb">
-				<li><a href="#">여행도시</a></li>
-				<li><a href="#">호텔예약</a></li>
-				<li><a href="#">렌트카</a></li>
-				<li class="new"><a href="#">
-					<img src="../images-h/new.png" alt="new">여행TIP</a></li>
-				<li><a href="#">회사소개</a></li>
-				<li><a href="#">커뮤니티</a></li>
+		
+		<nav class="gnb">
+
+			<ul>
+				<li><a href="#">여행도시</a>	
+					<ul class="sub">
+						<div class="sub_one">
+							<li><a href="#">여행도시</a></li>
+							<li><a href="#">여행도시</a></li>
+							<li><a href="#">여행도시</a></li>
+							<li><a href="#">여행도시</a></li>
+						</div>
+					</ul>
+				</li>
+				<li><a href="#">호텔예약</a>
+					<ul class="sub">
+						<div class="sub_two">
+							<li><a href="#">호텔예약</a></li>
+							<li><a href="#">호텔예약</a></li>
+							<li><a href="#">호텔예약</a></li>
+							<li><a href="#">호텔예약</a></li>
+						</div>
+					</ul>
+				</li>
+				<li><a href="#">렌트카</a>
+					<ul class="sub">
+						<div class="sub_three">
+							<li><a href="#">렌트카</a></li>
+							<li><a href="#">렌트카</a></li>
+							<li><a href="#">렌트카</a></li>
+							<li><a href="#">렌트카</a></li>
+						</div>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+					<img src="../images-h/new.png" alt="new">여행TIP</a>
+					<ul class="sub">
+						<div class="sub_four">
+							<li><a href="#">여행 TIP</a></li>
+							<li><a href="#">여행 TIP</a></li>
+							<li><a href="#">여행 TIP</a></li>
+							<li><a href="#">여행 TIP</a></li>
+						</div>
+					</ul>
+				</li>
+				<li><a href="#">회사소개</a>
+					<ul class="sub">
+						<div class="sub_five">
+							<li><a href="#">사업영역</a></li>
+							<li><a href="#">조직도</a></li>
+							<li><a href="#">채용정보</a></li>
+							<li><a href="#">오시는 길</a></li>
+						</div>
+					</ul>
+				</li>
+				<li><a href="#">커뮤니티</a>
+					<ul class="sub">
+						<div class="sub_six">
+							<li><a href="#">커뮤니티</a></li>
+							<li><a href="#">커뮤니티</a></li>
+							<li><a href="#">커뮤니티</a></li>
+							<li><a href="#">커뮤니티</a></li>
+						</div>
+					</ul>
+				</li>
 			</ul>
-		</div>
+		</nav>
 	</header>
 
 	<div class="content">
@@ -160,7 +224,7 @@
 									아이<input type="number" min="1" max="5" placeholder="1">
 								</li>
 								<li>
-									<button type="submit" value="submit" class="sub">
+									<button type="submit" value="submit" class="submit">
 									<i class="fas fa-search">검색하기 </i></button>
 								</li>
 							</ul>
@@ -199,7 +263,7 @@
 									아이<input type="number" min="1" max="5" placeholder="1">
 								</li>
 								<li>
-									<button type="submit" value="submit" class="sub">
+									<button type="submit" value="submit" class="submit">
 									<i class="fas fa-search">검색하기</i></button>
 								</li>
 							</ul>
@@ -238,7 +302,7 @@
 									아이<input type="number" min="1" max="5" placeholder="1">
 								</li>
 								<li>
-									<button type="submit" value="submit" class="sub">
+									<button type="submit" value="submit" class="submit">
 									<i class="fas fa-search">검색하기</i></button>
 								</li>
 							</ul>
@@ -277,7 +341,7 @@
 									아이<input type="number" min="1" max="5" placeholder="1">
 								</li>
 								<li>
-									<button type="submit" value="submit" class="sub">
+									<button type="submit" value="submit" class="submit">
 									<i class="fas fa-search">검색하기</i></button>
 								</li>
 							</ul>
