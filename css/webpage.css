@@ -1,7 +1,7 @@
 @charset "uff-8";
 
 /*header*/
-#header_wrap{height: 88px;width: 100%;background: #076fa6;}
+#header_wrap{height: 158px;width: 100%;background: #076fa6;}
 .header_img{background: url(../images-h/air.png) no-repeat;margin: 0 auto;width: 1600px;height: 88px;}
 .header{width: 1000px;height: 88px;position: relative;margin: 0 auto}
 
@@ -16,21 +16,33 @@
 
 
 /*header_gnb*/
-.gnb_wrap{background: #fcfcfc;height: 70px;width: 100%;border-bottom: 3px solid #0f73a7;}
-.gnb:after{content: "";display: block;clear: both;}
-.gnb{width: 1000px;margin: 0 auto;}
-.gnb li{float: left;width: 166px;text-align: center;border-right: 1px solid #eee;
-box-sizing: border-box;}
-.gnb li:first-child{border-left: 1px solid #eee;}
-.gnb .new{position: relative;}
-.gnb .new img{position: absolute;top: 0;right: 20px;}
-.gnb li:hover{background: #eee;}
+.gnb{background: #fcfcfc;height: 70px;width: 100%;position: relative;}
+.gnb>ul:after{content: "";display: block;clear: both;}
+.gnb>ul{width: 1000px;margin:0 auto;}
+.gnb>ul>li{float: left;width: 16.3%;text-align: center;border-right: 1px solid #eee;
+line-height: 70px;}
+.gnb>ul>li:first-child{border-left: 1px solid #eee;}
+.gnb img{position: absolute;top: 0px;right: 810px;}
+/*.gnb>ul>li:hover{background: #eee;}*/
 .gnb a{display: block;font-size: 18px;font-weight: bold;line-height: 70px}
+
+
+/*sub_nav*/
+.sub{width: 100%;float: left;height: 40px;background:rgb(0,0,0,0.7);position: absolute;left: 0;}
+.sub:after{content: "";display: block;clear: both;}
+.sub li{float: left;width: 120px;}
+.sub a:link,.sub a:visited{color: white;font-size: 14px;color: #fff;line-height: 40px}
+.sub_one{margin-left: 460px;}
+.sub_two{margin-left: 640px;}
+.sub_three{margin-left: 800px;}
+.sub_four{margin-left: 610px;}
+.sub_five{margin-left: 770px;}
+.sub_six{margin-left: 940px;}
 
 
 /*content*/
 .content{background: url(../images-h/bg2.jpg);background-size:cover;height: 1250px;
-margin: 0 auto;margin-top: 73px;}
+margin: 0 auto;}
 .content:after{content: "";display: block;clear: both;}
 
 .block{width: 1000px;height: 70px;}
@@ -70,7 +82,7 @@ text-align: center;}
 .sthree{width: 140px;float: left;}
 .sthree select{width: 140px;}
 .sfour{width: 50px;float: left;}
-.sub{background: #ea4f1f;color: white;font-weight: bold;width: 280px;
+.submit{background: #ea4f1f;color: white;font-weight: bold;width: 280px;
 height: 40px;border-right: 10px;font-size: 15px;border-radius: 10px;margin-top: 10px}
 
 
