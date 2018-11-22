@@ -2,7 +2,7 @@
 
 /*header*/
 #header_wrap{height: 158px;width: 100%;background: #076fa6;}
-.header_img{background: url(../images-h/air.png) no-repeat;margin: 0 auto;width: 1600px;height: 88px;}
+.header_img{background: url(../images-h/air.png) no-repeat;margin: 0 auto;width: 100%;}
 .header{width: 1000px;height: 88px;position: relative;margin: 0 auto}
 
 .header>img{display: block;width: 200px;height: 88px;}
@@ -42,7 +42,7 @@ line-height: 70px;}
 /*background top*/
 .bgt_wrap{width: 100%;background: #eee;height: 1300px;border-top: 3px solid #0f73a7;}
 .bgt_bg{width: 100%;background: #6fb4df;height: 288px;}
-.bgt{margin: 0 auto;background: url(../images-h/som.png) no-repeat;width: 1600px;height: 288px;
+.bgt{margin: 0 auto;background: url(../images-h/island.png) no-repeat;width: 100%;height: 288px;
 text-align: center;color: #fff;font-size: 18px;}
 .bgt a{display: block;text-align: center;padding-top: 40px;width: 460px;height: 148px;
 margin: 0 auto;}
