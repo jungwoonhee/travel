@@ -3,12 +3,447 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta charset="UTF-8">
-	<title>index</title>
+	<title>문서 제목</title>
+
+	<link rel="stylesheet" href="./css/reset.css">	
+	<link rel="stylesheet" href="./css/webpage.css">
+	<link rel="stylesheet" href="./css/jquery.bxslider.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<script src="./js/jquery.js"></script>
+	<script src="./js/jquery.bxslider.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			$(".sub").hide();
+			$(".gnb>ul>li").hover(function(){
+				var a=$(this).index();
+				$(".sub").eq(a).stop().slideDown();
+			}, function(){
+				$(".sub").hide();
+			})
+
+			var i=$('#slider').bxSlider({
+				controls:false
+			});
+			$('.prev').click(function(){
+				i.goToPrevSlide();
+				return false;
+			});
+			$('.next').click(function(){
+				i.goToNextSlide();
+				return false;
+			});
+
+			$('.sbox').bxSlider({
+				controls:false, mode:'vertical', pagerCustom:'.box-pager'
+			});
+
+			var j=$('.hslide').bxSlider({
+				controls:false, pager:false
+			});
+
+			$('.rprev').click(function(){
+				j.goToPrevSlide();
+				return false;
+			});
+
+			$('.rnext').click(function(){
+				j.goToNextSlide();
+				return false;
+			});
+
+			var k=$('.htslide').bxSlider({
+				controls:false, pager:false
+			});
+
+			$('.htprev').click(function(){
+				k.goToPrevSlide();
+				return false;
+			});
+
+			$('.htnext').click(function(){
+				k.goToNextSlide();
+				return false;
+			});
+				
+		});
+	</script>
+
+	<style>
+		.bx-wrapper{box-shadow: none;border:none;background: none;}
+		.right{position: relative;}
+		.next,.prev,.box{position: absolute;cursor: pointer;right: 20px;bottom: 30px;}
+		.prev{right: 45px;}
+		.right .bx-wrapper .bx-pager{bottom: 30px;color: #fff;padding-left: 110px;}
+		.right .bx-wrapper .bx-pager.bx-default-pager a:hover,.right .bx-wrapper .bx-pager.bx-default-pager a.active,.right .bx-wrapper .bx-pager.bx-default-pager a:focus { background: #fff;}
+		.right .bx-wrapper .bx-pager.bx-default-pager a {border: 2px solid #fff;background: none;}
+
+		.hslide_wrap .bx-wrapper{margin:0;}
+		.hslide_wrap{position: relative;}
+		.rprev,.rnext{position: absolute;top: 80px;}
+		.rnext{right: 0;}
+
+		.htslide_wrap .bx-wrapper{margin:0;}
+		.htslide_wrap{position: relative;}
+		.htprev,.htnext{position: absolute;top: 80px;}
+		.htnext{right: 0;}
+	</style>
+
 </head>
 <body>
-	<ol>
-		<li><a href="./html/webpage.html">travel</a></li>
-		<li><a href="./html/webpage_sub.html">travel_sub</a></li>
-	</ol>
+	<header id="header_wrap">
+		<div class="header_img">
+			<div class="header">
+				<a href="#"><img src="./images-h/title.png" alt="title"></a>
+				<fieldset id="bo_sch" style="width: 300px">
+					<form name="fsearch" method="get">
+						<label for="sfz" class="sound_only">SEARCH</label>
+						<input type="text" name="stx" id="sfz" size="25" maxlength="20" placeholder="검색어를 입력하세요." class="sch_input"
+						required>
+						<button type="submit" value="검색" class="sch_btn">
+							<i class="fas fa-search"></i>
+						</button>
+					</form>
+				</fieldset>
+				<div class="sns">
+					<a href="https://ko-kr.facebook.com/"><img src="./images-h/fb.png" alt=""></a>
+					<a href="https://twitter.com/?lang=ko"><img src="./images-h/tw.png" alt=""></a>
+					<a href="https://www.google.cokr"><img src="./images-h/bind.png" alt=""></a>
+					<a href="https://www.youtube.com/"><img src="./images-h/in.png" alt=""></a>
+				</div>
+			</div>
+		</div>
+		
+		<nav class="gnb">
+
+			<ul>
+				<li><a href="#">여행도시</a>	
+					<ul class="sub">
+						<div class="sub_one">
+							<li><a href="sub.html">여행도시</a></li>
+							<li><a href="sub.html">여행도시</a></li>
+							<li><a href="sub.html">여행도시</a></li>
+							<li><a href="sub.html">여행도시</a></li>
+						</div>
+					</ul>
+				</li>
+				<li><a href="#">호텔예약</a>
+					<ul class="sub">
+						<div class="sub_two">
+							<li><a href="sub.html">호텔예약</a></li>
+							<li><a href="sub.html">호텔예약</a></li>
+							<li><a href="sub.html">호텔예약</a></li>
+							<li><a href="sub.html">호텔예약</a></li>
+						</div>
+					</ul>
+				</li>
+				<li><a href="#">렌트카</a>
+					<ul class="sub">
+						<div class="sub_three">
+							<li><a href="sub.html">렌트카</a></li>
+							<li><a href="sub.html">렌트카</a></li>
+							<li><a href="sub.html">렌트카</a></li>
+							<li><a href="sub.html">렌트카</a></li>
+						</div>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+					<img src="./images-h/new.png" alt="new">여행TIP</a>
+					<ul class="sub">
+						<div class="sub_four">
+							<li><a href="sub.html">여행 TIP</a></li>
+							<li><a href="sub.html">여행 TIP</a></li>
+							<li><a href="sub.html">여행 TIP</a></li>
+							<li><a href="sub.html">여행 TIP</a></li>
+						</div>
+					</ul>
+				</li>
+				<li><a href="#">회사소개</a>
+					<ul class="sub">
+						<div class="sub_five">
+							<li><a href="sub.html">사업영역</a></li>
+							<li><a href="sub.html">조직도</a></li>
+							<li><a href="sub.html">채용정보</a></li>
+							<li><a href="sub.html">오시는 길</a></li>
+						</div>
+					</ul>
+				</li>
+				<li><a href="#">커뮤니티</a>
+					<ul class="sub">
+						<div class="sub_six">
+							<li><a href="sub.html">커뮤니티</a></li>
+							<li><a href="sub.html">커뮤니티</a></li>
+							<li><a href="sub.html">커뮤니티</a></li>
+							<li><a href="sub.html">커뮤니티</a></li>
+						</div>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="content">
+		<div class="block"></div>
+
+		<div class="row_wrap">
+			<div class="row">
+				<div class="span one">
+					<div class="sbox">
+						<form name="osearch" method="get">
+							<ul>
+								<li class="sone">
+									<label for="nation" class="sound_only">가고싶은 나라를 선택하세요.</label>
+														
+									<select name="nation" id="nation">
+										<option value="0">선택하세요</option>
+										<option value="1">KOREA</option>
+										<option value="1">JAPAN</option>
+										<option value="1">CHINA</option>
+										<option value="1">AMERICA</option></select>
+								</li>
+								<li class="stwo">
+									출발일<input type="date" min="2018-09-01">
+									
+								</li>
+								<li class="stwo">
+									도착일<input type="date" min="2018-09-01">
+								</li>
+								<li class="sthree">
+									<label for="seat" class="sound_only">좌석등급</label>
+									<select name="seat" id="seat">
+										<option value="1">일반석</option>
+										<option value="1">비즈니스석</option>
+										<option value="1">일등석</option>
+									</select>
+								</li>
+								<li class="sfour">
+									성인<input type="number" min="1" max="5" placeholder="1">
+								</li>
+								<li class="sfour">
+									아이<input type="number" min="1" max="5" placeholder="1">
+								</li>
+								<li>
+									<button type="submit" value="submit" class="submit">
+									<i class="fas fa-search">검색하기 </i></button>
+								</li>
+							</ul>
+						</form>
+						<form name="osearch" method="get">
+							<ul>
+								<li class="sone">
+									<label for="nation" class="sound_only">가고싶은 나라를 선택하세요.</label>
+														
+									<select name="nation" id="nation">
+										<option value="0">선택하세요</option>
+										<option value="1">KOREA</option>
+										<option value="1">JAPAN</option>
+										<option value="1">CHINA</option>
+										<option value="1">AMERICA</option></select>
+								</li>
+								<li class="stwo">
+									출발일<input type="date" min="2018-09-01">
+									
+								</li>
+								<li class="stwo">
+									도착일<input type="date" min="2018-09-01">
+								</li>
+								<li class="sthree">
+									<label for="seat" class="sound_only">좌석등급</label>
+									<select name="seat" id="seat">
+										<option value="1">일반석</option>
+										<option value="1">비즈니스석</option>
+										<option value="1">일등석</option>
+									</select>
+								</li>
+								<li class="sfour">
+									성인<input type="number" min="1" max="5" placeholder="1">
+								</li>
+								<li class="sfour">
+									아이<input type="number" min="1" max="5" placeholder="1">
+								</li>
+								<li>
+									<button type="submit" value="submit" class="submit">
+									<i class="fas fa-search">검색하기</i></button>
+								</li>
+							</ul>
+						</form>
+						<form name="osearch" method="get">
+							<ul>
+								<li class="sone">
+									<label for="nation" class="sound_only">가고싶은 나라를 선택하세요.</label>
+														
+									<select name="nation" id="nation">
+										<option value="0">선택하세요</option>
+										<option value="1">KOREA</option>
+										<option value="1">JAPAN</option>
+										<option value="1">CHINA</option>
+										<option value="1">AMERICA</option></select>
+								</li>
+								<li class="stwo">
+									출발일<input type="date" min="2018-09-01">
+									
+								</li>
+								<li class="stwo">
+									도착일<input type="date" min="2018-09-01">
+								</li>
+								<li class="sthree">
+									<label for="seat" class="sound_only">좌석등급</label>
+									<select name="seat" id="seat">
+										<option value="1">일반석</option>
+										<option value="1">비즈니스석</option>
+										<option value="1">일등석</option>
+									</select>
+								</li>
+								<li class="sfour">
+									성인<input type="number" min="1" max="5" placeholder="1">
+								</li>
+								<li class="sfour">
+									아이<input type="number" min="1" max="5" placeholder="1">
+								</li>
+								<li>
+									<button type="submit" value="submit" class="submit">
+									<i class="fas fa-search">검색하기</i></button>
+								</li>
+							</ul>
+						</form>
+						<form name="osearch" method="get">
+							<ul>
+								<li class="sone">
+									<label for="nation" class="sound_only">가고싶은 나라를 선택하세요.</label>
+														
+									<select name="nation" id="nation">
+										<option value="0">선택하세요</option>
+										<option value="1">KOREA</option>
+										<option value="1">JAPAN</option>
+										<option value="1">CHINA</option>
+										<option value="1">AMERICA</option></select>
+								</li>
+								<li class="stwo">
+									출발일<input type="date" min="2018-09-01">
+									
+								</li>
+								<li class="stwo">
+									도착일<input type="date" min="2018-09-01">
+								</li>
+								<li class="sthree">
+									<label for="seat" class="sound_only">좌석등급</label>
+									<select name="seat" id="seat">
+										<option value="1">일반석</option>
+										<option value="1">비즈니스석</option>
+										<option value="1">일등석</option>
+									</select>
+								</li>
+								<li class="sfour">
+									성인<input type="number" min="1" max="5" placeholder="1">
+								</li>
+								<li class="sfour">
+									아이<input type="number" min="1" max="5" placeholder="1">
+								</li>
+								<li>
+									<button type="submit" value="submit" class="submit">
+									<i class="fas fa-search">검색하기</i></button>
+								</li>
+							</ul>
+						</form>
+					</div>
+					<div class="box-pager">
+						<li><a href="javascript:void(0)" data-slide-index="0"><i class="fas fa-plane"></i>공항예약</a></li>
+						<li><a href="javascript:void(0)" data-slide-index="1"><i class="fas fa-mouse-pointer"></i>숙소예약</a></li>
+						<li><a href="javascript:void(0)" data-slide-index="2"><i class="fas fa-car"></i>렌터카</a></li>
+						<li><a href="javascript:void(0)" data-slide-index="3"><i class="fas fa-suitcase"></i>휴양지</a></li>
+					</div>
+				</div>				
+			</div>
+			
+
+			<div class="row right">
+				<div id="slider">
+					<img src="./images-h/text.png" alt="text">
+					<img src="./images-h/text.png" alt="text">
+					<img src="./images-h/text.png" alt="text">
+					<img src="./images-h/text.png" alt="text">
+				</div>
+				<div class="box"><a href="javascript:void(0)"><img src="./images-h/box.png" alt="box"></a></div>
+				<div class="next"><a href="javascript:void(0)"><img src="./images-h/next.png" alt="next"></a></div>
+				<div class="prev"><a href="javascript:void(0)"><img src="./images-h/prev.png" alt="prev"></a></div>
+			</div>
+
+			<div class="row">
+				<div class="span two">
+					<div class="cone">
+						<a href="#" class="ccone">프랑스    <span>1,900,000~</span>  ></a>
+					</div>
+				</div>
+				<div class="span two">
+					<div class="ctwo">
+						<a href="#" class="ccone">일본    <span>890,000~</span>   ></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="span two">
+					<div class="hslide_wrap">
+						<div class="hslide">
+							<a href="#"><img src="./images-h/hotel2.png" alt="hotel"></a>
+							<a href="#"><img src="./images-h/hotel2.png" alt="hotel"></a>
+							<a href="#"><img src="./images-h/hotel2.png" alt="hotel"></a>
+						</div>
+						<img src="./images-h/rprev.png" alt="prev" class="rprev">
+						<img src="./images-h/rnext.png" alt="next" class="rnext">
+					</div>
+				</div>
+				<div class="span two">
+					<div class="htslide_wrap">
+						<div class="htslide">
+							<a href="#"><img src="./images-h/disney.png" alt="disney"></a>
+							<a href="#"><img src="./images-h/disney.png" alt="disney"></a>
+							<a href="#"><img src="./images-h/disney.png" alt="disney"></a>
+						</div>
+						<img src="./images-h/rprev.png" alt="prev" class="htprev">
+						<img src="./images-h/rnext.png" alt="next" class="htnext">
+					</div>
+				</div>
+				<div class="span two">
+					<div class="cthree">
+						<p><span style="font-weight: bold;font-size: 17px">20℃ 구름조금</span><br>습도 60% 바람 남남동 2m/s</p>
+					</div>
+				</div>
+				<div class="span two">
+					<a href="#"><img src="./images-h/fbtext.png" alt="fbtext"></a>
+				</div>
+			</div>
+			
+			<div class="row bot">
+				<div class="span two">
+					<div class="bone">
+						<a href="#"><img src="./images-h/bbox11.png" alt="b1"></a>
+					</div>
+				</div>
+				<div class="span two">
+					<div class="btwo">
+						<a href="#"><img src="./images-h/bbox21.png" alt="b1"></a>
+					</div>
+				</div>
+				<div class="span two">
+					<div class="bthree">
+						<a href="#"><img src="./images-h/bbox31.png" alt="b1"></a>
+					</div>
+				</div>
+				<div class="span two">
+					<div class="bfour">
+						<a href="#"><img src="./images-h/bbox41.png" alt="b1"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<span>이용약관         개인정보취급방침        사이트맵        고객센터        광고 및 제휴문의</span><br>
+		<p>123-456    서율특별시 구로구 구로동 (주)하이미디어  사업자등록번호 :  123-45-678910   대표이사 :  홍길동 대표번호 : 02-1234-5678<br>
+		copyrightⓒ2014 HIMEDIA TOUR. ALL RIGHTS RESERVED.<br></p>
+	</div>
+
 </body>
 </html>

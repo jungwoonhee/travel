@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+	<link rel="stylesheet" href="./css/reset.css">	
+	<link rel="stylesheet" href="./css/webpage_sub.css">
+	<link rel="stylesheet" href="./css/jquery.bxslider.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<script src="./js/jquery.js"></script>
+	<script src="./js/jquery.bxslider.js"></script>
+	<script>
+		$(function(){
+
+			$(".sub").hide();
+			$(".gnb>ul>li").hover(function(){
+				var i=$(this).index();
+				$(".sub").eq(i).stop().slideDown();
+			}, function(){
+				$(".sub").hide();
+			})
+		})
+	</script>
+</head>
+<body>
+	<header id="header_wrap">
+		<div class="header_img">
+			<div class="header">
+				<a href="#"><img src="./images-h/title.png" alt="title"></a>
+				<fieldset id="bo_sch" style="width: 300px">
+					<form name="fsearch" method="get">
+						<label for="sfz" class="sound_only">SEARCH</label>
+						<input type="text" name="stx" id="sfz" size="25" maxlength="20" placeholder="검색어를 입력하세요." class="sch_input"
+						required>
+						<button type="submit" value="검색" class="sch_btn">
+							<i class="fas fa-search"></i>
+						</button>
+					</form>
+				</fieldset>
+				<div class="sns">
+					<a href="https://ko-kr.facebook.com/"><img src="./images-h/fb.png" alt=""></a>
+					<a href="https://twitter.com/?lang=ko"><img src="./images-h/tw.png" alt=""></a>
+					<a href="https://www.google.cokr"><img src="./images-h/bind.png" alt=""></a>
+					<a href="https://www.youtube.com/"><img src="./images-h/in.png" alt=""></a>
+				</div>
+			</div>
+		</div>
+		
+		<nav class="gnb">
+
+			<ul>
+				<li><a href="#">여행도시</a>	
+					<ul class="sub">
+						<div class="sub_one">
+							<li><a href="#">여행도시</a></li>
+							<li><a href="#">여행도시</a></li>
+							<li><a href="#">여행도시</a></li>
+							<li><a href="#">여행도시</a></li>
+						</div>
+					</ul>
+				</li>
+				<li><a href="#">호텔예약</a>
+					<ul class="sub">
+						<div class="sub_two">
+							<li><a href="#">호텔예약</a></li>
+							<li><a href="#">호텔예약</a></li>
+							<li><a href="#">호텔예약</a></li>
+							<li><a href="#">호텔예약</a></li>
+						</div>
+					</ul>
+				</li>
+				<li><a href="#">렌트카</a>
+					<ul class="sub">
+						<div class="sub_three">
+							<li><a href="#">렌트카</a></li>
+							<li><a href="#">렌트카</a></li>
+							<li><a href="#">렌트카</a></li>
+							<li><a href="#">렌트카</a></li>
+						</div>
+					</ul>
+				</li>
+				<li>
+					<a href="#">
+					<img src="./images-h/new.png" alt="new">여행TIP</a>
+					<ul class="sub">
+						<div class="sub_four">
+							<li><a href="#">여행 TIP</a></li>
+							<li><a href="#">여행 TIP</a></li>
+							<li><a href="#">여행 TIP</a></li>
+							<li><a href="#">여행 TIP</a></li>
+						</div>
+					</ul>
+				</li>
+				<li><a href="#">회사소개</a>
+					<ul class="sub">
+						<div class="sub_five">
+							<li><a href="#">사업영역</a></li>
+							<li><a href="#">조직도</a></li>
+							<li><a href="#">채용정보</a></li>
+							<li><a href="#">오시는 길</a></li>
+						</div>
+					</ul>
+				</li>
+				<li><a href="#">커뮤니티</a>
+					<ul class="sub">
+						<div class="sub_six">
+							<li><a href="#">커뮤니티</a></li>
+							<li><a href="#">커뮤니티</a></li>
+							<li><a href="#">커뮤니티</a></li>
+							<li><a href="#">커뮤니티</a></li>
+						</div>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+
+	<div class="bgt_wrap">
+		<div class="bgt_bg">
+			<div class="bgt">
+				<a href="#"><img src="./images-h/company.png" alt="company"></a>
+				<p>하이미디어와 여행을 떠나세요.</p>
+			</div>
+		
+			<div class="bg_bg">
+				<div class="bg_text">
+					<p style="font-size: 22px;color: #727171">여행에 대한 당신의 상상력과 설레임이 요구됩니다.</p>
+					<p style="font-size: 38px">지금, 여행을 떠나고 싶다면?</br>
+					<span style="color: #006499">하이미디어투어와 함께하세요.</span></p>
+					<p style="font-size: 18px;color: #f63805;text-decoration: underline;">18년을 쉬지않고 달려왔습니다.</p>
+					<p style="font-size: 13px;color: #6d6a6a">젊은여행사 FGTOUR는 1993년 10월 배낭여행 1세대들에 의해 설립된 자유여행
+					전문 여행사입니다. 처음 우리가 세운 거창한 목표는 여행을 통한 인간 삶의 긍정
+					적 변화”였습니다. 상품을 기획하고, 컨텐츠를 개발하고, 새로운 지역을 탐구하며
+					18년을 쉬지 않고 달려왔습니다.</p>
+					
+					<table>
+						<tr>
+							<td class="tleft">법인명</td>
+							<td>(주)하이미디어</td>
+						</tr>
+						<tr>
+							<td class="tleft">사업자등록번호</td>
+							<td>123-45-67890</td>
+						</tr>
+						<tr>
+							<td class="tleft">대표자</td>
+							<td>홍길동</td>
+						</tr>
+						<tr>
+							<td class="tleft">설립일</td>
+							<td>1993년 10월 10일</td>
+						</tr>
+						<tr>
+							<td class="tleft">주  소</td>
+							<td>서울시 구로구 구로동</td>
+						</tr>
+						<tr>
+							<td class="tleft">전  화</td>
+							<td>02-123-4567</td>
+						</tr>
+						<tr>
+							<td class="tleft">홈페이지</td>
+							<td>www.tour.co.kr</td>
+						</tr>
+					</table>
+				</div>	
+				<div class="bg_img">
+					<div class="img_bg bgone">
+						<a href="#"><img src="./images-h/ft.png" alt="1"></a></div>
+					<div class="img_bg bgtwo">
+						<a href="#"><img src="./images-h/bt.png" alt="1"></a></div>
+					<div class="img_bg bgthree">
+						<a href="#"><img src="./images-h/st.png" alt="1"></a></div>
+					<div class="img_bg bgfour">
+						<a href="#"><img src="./images-h/bet.png" alt="1"></a></div>
+				</div>
+			</div>
+			<div class="footer">
+				<p style="font-weight: bold;font-size: 14px">이용약관         개인정보취급방침        사이트맵        고객센터        광고 및 제휴문의</p>
+				<p>123-456    서율특별시 구로구 구로동 (주)하이미디어  사업자등록번호 :  123-45-678910   대표이사 :  홍길동 대표번호 : 02-1234-5678</p>
+				<p>copyrightⓒ2014 HIMEDIA TOUR. ALL RIGHTS RESERVED.</p>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
